@@ -14,6 +14,13 @@ let code = [],
     selections = document.getElementsByClassName('selection');
     hintPegs = document.getElementsByClassName('h-peg');
 
+let modal = document.querySelector(".modal");
+let closeButton = document.querySelector(".close-button");
+let winLostText = document.querySelector("#win-lost-text");
+
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
 
 // Functions
 function GameSetup() {
@@ -51,6 +58,8 @@ function compare() {
 
   if (blacks === 4) {
     console.log('Bingo');
+    revealCode();
+    toggleModal('You won, congratulation');
   }
 
   //Compare how many white pegs
@@ -61,6 +70,11 @@ function compare() {
     }
   }
   insertHints(blacks, (whites - blacks));
+
+  if (guess.length == 32) {
+    revealCode();
+    toggleModal('You lost, try again');
+  }
 }
 
 
@@ -88,13 +102,6 @@ function generateCode() {
 }
 
 
-function assignColors(code) {
-  code.forEach(el => {
-    console.log(colors[el]);
-  });
-}
-
-
 function revealCode() {
   for (let i = 0; i < 4; i++) {
     secretSockets[i].className += ' ' + colors[code[i]];
@@ -103,7 +110,18 @@ function revealCode() {
 }
 
 
+function toggleModal(text) {
+  winLostText.innerHTML = text;
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+      toggleModal();
+  }
+}
+
+
 GameSetup();
 generateCode();
-// assignColors(code);
-revealCode();
+// revealCode();
