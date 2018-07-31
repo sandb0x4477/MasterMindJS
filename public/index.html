@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>MasterMind</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="title">
+      <h2>MasterMind</h2>
+    </div>
+
+  <div class="board-wrapper">
+    <div class="board">
+      <div class="secret socket">?</div>
+      <div class="secret socket">?</div>
+      <div class="secret socket">?</div>
+      <div class="secret socket">?</div>
+
+      <div class="guess socket" id="28"></div>
+      <div class="guess socket" id="29"></div>
+      <div class="guess socket" id="30"></div>
+      <div class="guess socket" id="31"></div>
+
+      <div class="guess socket" id="24"></div>
+      <div class="guess socket" id="25"></div>
+      <div class="guess socket" id="26"></div>
+      <div class="guess socket" id="27"></div>
+
+      <div class="guess socket" id="20"></div>
+      <div class="guess socket" id="21"></div>
+      <div class="guess socket" id="22"></div>
+      <div class="guess socket" id="23"></div>
+
+      <div class="guess socket" id="16"></div>
+      <div class="guess socket" id="17"></div>
+      <div class="guess socket" id="18"></div>
+      <div class="guess socket" id="19"></div>
+
+      <div class="guess socket" id="12"></div>
+      <div class="guess socket" id="13"></div>
+      <div class="guess socket" id="14"></div>
+      <div class="guess socket" id="15"></div>
+
+      <div class="guess socket" id="8"></div>
+      <div class="guess socket" id="9"></div>
+      <div class="guess socket" id="10"></div>
+      <div class="guess socket" id="11"></div>
+
+      <div class="guess socket" id="4"></div>
+      <div class="guess socket" id="5"></div>
+      <div class="guess socket" id="6"></div>
+      <div class="guess socket" id="7"></div>
+
+      <div class="guess socket" id="0"></div>
+      <div class="guess socket" id="1"></div>
+      <div class="guess socket" id="2"></div>
+      <div class="guess socket" id="3"></div>
+    </div>
+
+    <div class="hints">
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+
+      <div class="hint">
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+        <div class="h-peg"></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="selector">
+      <button class="selection socket white" id="white" value="0"></button>
+      <button class="selection socket black" id="black" value="1"></button>
+      <button class="selection socket red" id="red" value="2"></button>
+      <button class="selection socket yellow" id="yellow" value="3"></button>
+      <button class="selection socket green" id="green" value="4"></button>
+      <button class="selection socket blue" id="blue" value="5"></button>
+    </div>
+
+
+  <div class="modal">
+      <div class="modal-content">
+          <span class="close-button">×</span>
+          <h1 id="win-lost-text">You win</h1>
+      </div>
+  </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
