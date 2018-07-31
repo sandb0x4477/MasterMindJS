@@ -69,7 +69,8 @@ function compare() {
       guessLastFour[guessLastFour.indexOf(code[j])] = 0;
     }
   }
-  insertHints(blacks, (whites - blacks));
+  whites = whites - blacks
+  insertHints(blacks, whites);
 
   if (guess.length == 32) {
     revealCode();
@@ -124,4 +125,4 @@ function windowOnClick(event) {
 
 GameSetup();
 generateCode();
-// revealCode();
+revealCode();
