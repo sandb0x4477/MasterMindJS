@@ -64,12 +64,18 @@ function compare() {
 
   //Compare how many white pegs
   for (var j = 0; j < code.length; j++) {
-    if (guessLastFour.indexOf(code[j]) !== -1) {
+    let tempArr = guessLastFour.slice();
+    if (tempArr.indexOf(code[j]) !== -1) {
       whites++;
-      guessLastFour[guessLastFour.indexOf(code[j])] = 0;
+      tempArr.splice(tempArr.indexOf(code[j]), 1);
     }
   }
-  whites = whites - blacks
+
+  whites = whites - blacks;
+
+  console.log('Blacks: ' + blacks);
+  console.log('Whites: ' + whites);
+
   insertHints(blacks, whites);
 
   if (guess.length == 32) {
