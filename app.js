@@ -131,4 +131,4 @@ function windowOnClick(event) {
 
 GameSetup();
 generateCode();
-revealCode();
+// revealCode();
